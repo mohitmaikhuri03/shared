@@ -1,4 +1,4 @@
-
+package snataak.common
 def call(String branch, String url, String credentialsId = null) {
     if (credentialsId) {
         git branch: branch, url: url, credentialsId: credentialsId
