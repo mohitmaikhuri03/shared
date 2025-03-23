@@ -10,9 +10,10 @@ def call(String branch, String repoUrl, String credentialsId = null, String repo
     }
 
     stage('Clone Repository') {
-        clone(branch, repoUrl, credentialsId)  
+        clone(branch, repoUrl, credentialsId)
+    }
 
     stage('Run Go Unit Tests') {
-        unit(reportsDir) 
+        unit(reportsDir)
     }
-}
+} 
