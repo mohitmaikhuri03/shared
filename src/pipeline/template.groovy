@@ -1,8 +1,7 @@
 package pipeline
 
-import snataak.common.clean
-import snataak.common.clone
-import snataak.golang.unit
+import snataak.common.*
+import snataak.golang.*
 
 def call(String branch, String repoUrl, String credentialsId = null, String reportsDir) {
     stage('Cleanup') {
