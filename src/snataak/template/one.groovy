@@ -1,4 +1,4 @@
-package pipeline
+package snataak.template
 
 import snataak.common.*
 import snataak.golang.*
