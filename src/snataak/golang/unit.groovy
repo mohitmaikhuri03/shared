@@ -1,4 +1,4 @@
-
+package snataak.golang
 def call(String reports) {
     sh """
         mkdir -p ${reports}
