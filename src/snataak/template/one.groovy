@@ -4,15 +4,13 @@ import snataak.common.*
 import snataak.golang.*
 
 def call(String branch, String repoUrl, String credentialsId = null, String reportsDir) {
-    stage('Cleanup') {
-        clean()
-    }
 
-    stage('Clone Repository') {
-        clone(branch, repoUrl, credentialsId)
-    }
+    def CLEAN = new Clean() 
+    def CLONE = new Clone()
+    def UNIT = new Unit()
 
-    stage('Run Go Unit Tests') {
-        unit(reportsDir)
-    }
-} 
+    CLEAN.call()
+    CLONE.call(branch, repoUrl, credentialsId)
+    UNIT.call(reportsDir)
+}
+
